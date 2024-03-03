@@ -1,12 +1,14 @@
 public class arrayCity {
-    City name;
+    City toCity;
     int cost;
 
-    arrayCity(){
-        this.name = name;
+    public arrayCity(City toCity, int cost){
+        this.toCity = toCity;
         this.cost = cost;
     }
 
     @Override
-
+    public String toString() {
+        return toCity.name + ": стоимость " + cost;
+    }
 }

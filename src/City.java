@@ -1,15 +1,19 @@
-public class City {
-    int point;
-    String name;
-    arrayCity[] arrayCity;
+import java.util.ArrayList;
 
-    City(){
+public class City {
+    String name;
+    ArrayList<arrayCity> arrayCities;
+
+    public City(String name){
         this.name = name;
-        this.point = point;
-        this.arrayCity = arrayCity;
+        this.arrayCities = new ArrayList<>();
     }
 
     public String toString(){
-
+        String result = "Из города " + name + " можно поехать в города: \n";
+        for (arrayCity arrayCity : arrayCities){
+            result += arrayCity + "\n";
+        }
+        return result;
     }
 }
