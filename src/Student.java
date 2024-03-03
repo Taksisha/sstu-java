@@ -4,7 +4,11 @@ class Student {
 
     public Student(String name, int[] grades) {
         this.name = name;
-        this.grades = grades;
+        if (grades != null) {
+            this.grades = grades.clone();
+        } else {
+            this.grades = new int[0];
+        }
     }
 
     @Override
