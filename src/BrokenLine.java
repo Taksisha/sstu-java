@@ -6,6 +6,9 @@ public class BrokenLine {
     public BrokenLine(Point[] points) {
         this.points = points;
     }
+    public BrokenLine() {
+        this.points = new Point[0];
+    }
 
     @Override
     public String toString() {
@@ -14,7 +17,8 @@ public class BrokenLine {
 
     public void shift(int dx, int dy) {
         for (Point point : points) {
-            point = new Point(point.x + dx, point.y + dy);
+            point.x += dx;
+            point.y += dy;
         }
     }
 }

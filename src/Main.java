@@ -11,7 +11,7 @@ public class Main {
         BrokenLine secondLine = new BrokenLine(secondLinePoints);
         System.out.println(secondLine);
 
-        // Shift both lines
+        // Shift
         firstLine.shift(1, 1);
         System.out.println(firstLine);
         System.out.println(secondLine);
