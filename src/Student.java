@@ -2,7 +2,7 @@ class Student {
     String name;
     int[] grades;
 
-    public Student(String name, int[] grades) {
+    public Student(String name, int... grades) {
         this.name = name;
         if (grades != null) {
             this.grades = grades.clone();
