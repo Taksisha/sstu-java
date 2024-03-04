@@ -9,6 +9,11 @@ public class City {
         this.arrayCities = new ArrayList<>();
     }
 
+    public City(String name, ArrayList<arrayCity> arrayCities){
+        this.name = name;
+        this.arrayCities = arrayCities;
+    }
+
     public String toString(){
         String result = "Из города " + name + " можно поехать в города: \n";
         for (arrayCity arrayCity : arrayCities){
