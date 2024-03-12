@@ -13,4 +13,9 @@ public class Line {
     public String toString() {
         return "Линия от " + startPoint.toString() + " до " + endPoint.toString();
     }
+
+    public int getLength() {
+        int length = (int) Math.sqrt(Math.pow(endPoint.x - startPoint.x, 2) + Math.pow(endPoint.y - startPoint.y, 2));
+        return length;
+    }
 }
