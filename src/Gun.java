@@ -1,20 +1,43 @@
 public class Gun {
+    private int maxBulletCount;
     private int bulletCount;
 
-    public Gun(int bulletCount) {
-        this.bulletCount = bulletCount;
+    public Gun(int maxBulletCount) {
+        this.maxBulletCount = maxBulletCount;
+        this.bulletCount = 0;
     }
 
-    public Gun(){
-        this.bulletCount = 5;
+    public void reload(int bullets) {
+        if (bullets < 0) {
+            throw new IllegalArgumentException("Невозможно перезарядить оружие с отрицательным количеством патронов");
+        }
+        if (bulletCount + bullets > maxBulletCount) {
+            bulletCount = maxBulletCount;
+        } else {
+            bulletCount += bullets;
+        }
     }
 
-    public void shot(){
-        if (bulletCount > 0){
+    public int shot() {
+        if (bulletCount > 0) {
             System.out.println("Бах!");
-            bulletCount --;
+            bulletCount--;
+            return 1;
         } else {
             System.out.println("Клац!");
+            return 0;
         }
+    }
+
+    public void discharge() {
+        bulletCount = 0;
+    }
+
+    public int getBulletCount() {
+        return bulletCount;
+    }
+
+    public boolean isLoaded() {
+        return bulletCount > 0;
     }
 }
