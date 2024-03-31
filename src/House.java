@@ -1,9 +1,13 @@
 public class House {
     private int floors;
 
-    public House(int floors){
+    House(int floors){
+        if(floors<0){
+            throw new IllegalArgumentException("Номер этажа не может быть отрицательным");
+        }
         this.floors = floors;
     }
+
     public String toString() {
         if (floors % 10 == 1 && floors % 100 != 11) {
             return "дом с " + floors + " этажем";

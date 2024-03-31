@@ -4,8 +4,12 @@ public class Main {
         House house2 = new House(35);
         House house3 = new House(91);
 
+        House house4 = new House(-99);
+
         System.out.println(house1.toString());
         System.out.println(house2.toString());
         System.out.println(house3.toString());
+
+        System.out.println(house4.toString());
     }
 }
