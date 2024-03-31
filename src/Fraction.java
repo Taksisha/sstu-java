@@ -3,6 +3,13 @@ public class Fraction {
     private int denominator;
 
     public Fraction(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new IllegalArgumentException("Знаменатель не может быть 0");
+        }
+        if (denominator < 0) {
+            numerator = -numerator;
+            denominator = -denominator;
+        }
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -48,6 +55,9 @@ public class Fraction {
     }
 
     public Fraction divide(int num) {
+        if (num == 0) {
+            throw new IllegalArgumentException("Нельзя делить на 0");
+        }
         return new Fraction(this.numerator, this.denominator * num);
     }
 }
