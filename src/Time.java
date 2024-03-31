@@ -29,7 +29,5 @@ public class Time {
         return seconds % 60;
     }
 
-    public int getSecondsPassedThisSeconds() {
-        return seconds;
-    }
+    public int getSecondsPassedThisSeconds() {return seconds;}
 }
