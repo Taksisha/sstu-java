@@ -1,21 +1,36 @@
 public class Line {
-    Point startPoint;
-    Point endPoint;
+    private Point startPoint;
+    private Point endPoint;
 
     public Line(Point startPoint, Point endPoint) {
-        this.startPoint = startPoint;
-        this.endPoint = endPoint;
+        this.startPoint = new Point(startPoint.getX(), startPoint.getY());
+        this.endPoint = new Point(endPoint.getX(), endPoint.getY());
     }
-    public Line(int x1, int y1, int x2, int y2) {
-        this.startPoint = new Point(x1, y1);
-        this.endPoint = new Point(x2, y2);
+
+    public void setStartPoint(Point startPoint) {
+        this.startPoint.setX(startPoint.getX());
+        this.startPoint.setY(startPoint.getY());
     }
+
+    public void setEndPoint(Point endPoint) {
+        this.endPoint.setX(endPoint.getX());
+        this.endPoint.setY(endPoint.getY());
+    }
+
+    public Point getStartPoint() {
+        return startPoint;
+    }
+
+    public Point getEndPoint() {
+        return endPoint;
+    }
+
     public String toString() {
         return "Линия от " + startPoint.toString() + " до " + endPoint.toString();
     }
 
     public int getLength() {
-        int length = (int) Math.sqrt(Math.pow(endPoint.x - startPoint.x, 2) + Math.pow(endPoint.y - startPoint.y, 2));
+        int length = (int) Math.sqrt(Math.pow(endPoint.getX() - startPoint.getX(), 2) + Math.pow(endPoint.getY() - startPoint.getY(), 2));
         return length;
     }
 }
