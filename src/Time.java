@@ -2,11 +2,7 @@ public class Time {
     private int seconds;
 
     public Time(int value) {
-        if (value >= 86400) {
-            this.seconds = value % 86400;
-        } else {
-            this.seconds = value;
-        }
+        this.seconds = value % 86400; // Приводим значение к диапазону суток
     }
 
     public Time(int hours, int minutes, int seconds) {
@@ -31,5 +27,9 @@ public class Time {
 
     public int getSecondsPassedThisMinute() {
         return seconds % 60;
+    }
+
+    public int getSecondsPassedThisSeconds() {
+        return seconds;
     }
 }

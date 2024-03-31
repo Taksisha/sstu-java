@@ -8,6 +8,6 @@ public class Main {
 
         System.out.println("Часов в 34056 секундах: " + time1.getCurrentHour());
         System.out.println("Минут в 4532 секундах: " + time2.getMinutesPassedThisHour());
-        System.out.println("Секунд в 123 секундах: " + time3.getSecondsPassedThisMinute());
+        System.out.println("Секунд в 123 секундах: " + time3.getSecondsPassedThisSeconds());
     }
 }
