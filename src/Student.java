@@ -1,29 +1,37 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Student {
     String name;
-    int[] grades;
+    List grades;
 
     public Student(String name, int... grades) {
         this.name = name;
-        if (grades != null) {
-            this.grades = grades.clone();
-        } else {
-            this.grades = new int[0];
+        this.grades = new ArrayList<>();
+        for (int grade : grades) {
+            if (grade >= 2 && grade <= 5) {
+                this.grades.add(grade);
+            }
         }
     }
 
+    public List<Integer> getGrades() {
+        return grades;
+    }
+
     public double getAverageGrade() {
-        if (grades.length == 0) {
+        if (grades.isEmpty()) {
             return 0;
         }
         int sum = 0;
         for (int grade : grades) {
             sum += grade;
         }
-        return (double) sum / grades.length;
+        return (double) sum / grades.size();
     }
 
     public boolean isExcellentStudent() {
-        if (grades.length == 0) {
+        if (grades.isEmpty()) {
             return false;
         }
         for (int grade : grades) {
@@ -36,15 +44,6 @@ class Student {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(name).append(": [");
-        for (int i = 0; i < grades.length; i++) {
-            sb.append(grades[i]);
-            if (i != grades.length - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
+        return name + ": " + grades.toString();
     }
 }
