@@ -10,7 +10,27 @@ public class Department {
         this.employees = new ArrayList<>();
     }
 
+    public void setChief(Employee chief){
+        this.chief = chief;
+    }
+
+    public Employee getChief(){
+        return chief;
+    }
+
+    public void addEmployee(Employee employee){
+        this.employees.add(employee);
+    }
+
+    public ArrayList<Employee> getEmployees(){
+        return employees;
+    }
+
+    public String getName(){
+        return name;
+    }
+
     public String toString(){
-        return name + " начальник которого " + chief.name;
+        return name + " начальник которого " + (Employee)chief.getName();
     }
 }

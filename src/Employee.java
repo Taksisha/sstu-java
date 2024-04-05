@@ -8,11 +8,11 @@ public class Employee {
     }
 
     public String toString(){
-        if(department.chief == this){
-            return name + " начальник отдела " + department.name;
+        if(department.getChief() == this){
+            return name + " начальник отдела " + department.getName();
         }
         else{
-            return name + " работает в отделе " + department;
+            return name + " работает в отделе " + department.getName();
         }
     }
 }
