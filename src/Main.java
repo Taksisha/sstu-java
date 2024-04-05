@@ -9,24 +9,19 @@ public class Main {
         City E = new City("E");
         City F = new City("F");
 
-        A.arrayCities.add(new arrayCity(F, 1));
-        A.arrayCities.add(new arrayCity(B, 5));
-        A.arrayCities.add(new arrayCity(D, 6));
+        A.addRoad(B, 5);
+        A.addRoad(F, 1);
+        A.addRoad(D, 6);
 
-        B.arrayCities.add(new arrayCity(A, 5));
-        B.arrayCities.add(new arrayCity(C, 3));
+        B.addRoad(C, 3);
 
-        C.arrayCities.add(new arrayCity(B, 3));
-        C.arrayCities.add(new arrayCity(D, 4));
+        C.addRoad(D, 4);
 
-        D.arrayCities.add(new arrayCity(C, 4));
-        D.arrayCities.add(new arrayCity(E, 2));
-        D.arrayCities.add(new arrayCity(A, 6));
+        D.addRoad(E, 2);
 
-        E.arrayCities.add(new arrayCity(F, 2));
+        E.addRoad(F, 2);
 
-        F.arrayCities.add(new arrayCity(E, 2));
-        F.arrayCities.add(new arrayCity(B, 1));
+        F.addRoad(B, 1);
 
         System.out.println(A);
         System.out.println(B);
