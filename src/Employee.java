@@ -15,4 +15,8 @@ public class Employee {
             return name + " работает в отделе " + department.getName();
         }
     }
+
+    public Object getName() {
+        return name;
+    }
 }
