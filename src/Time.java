@@ -25,6 +25,10 @@ public class Time {
         return (seconds % 3600) / 60;
     }
 
+    public int getMinutesPassedThisSeconds() {
+        return seconds/ 60;
+    }
+
     public int getSecondsPassedThisMinute() {
         return seconds % 60;
     }

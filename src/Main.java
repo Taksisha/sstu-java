@@ -7,7 +7,7 @@ public class Main {
         Time time3 = new Time(123);
 
         System.out.println("Часов в 34056 секундах: " + time1.getCurrentHour());
-        System.out.println("Минут в 4532 секундах: " + time2.getMinutesPassedThisHour());
+        System.out.println("Минут в 4532 секундах: " + time2.getMinutesPassedThisSeconds());
         System.out.println("Секунд в 123 секундах: " + time3.getSecondsPassedThisSeconds());
     }
 }
