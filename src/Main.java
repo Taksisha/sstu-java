@@ -12,7 +12,7 @@ public class Main {
         System.out.println(f1 + " / " + f2 + " = " + f1.divide(f2));
 
         Fraction result = f1.add(f2).divide(f3).subtract(5);
-        System.out.println(f1 + " + " + f2 + " / " + f3 + " - 5 = " + result);
+        System.out.println(f1 + " + " + f2 + " / " + f3 + " - 5 = " + result + "\n");
 
         Fraction f4 = new Fraction(-1, 3);
         Fraction f5 = new Fraction(2, -3);
