@@ -1,37 +1,36 @@
 public class Human {
-    String lastName;
-    String name;
-    String surname;
+    private final String lastName;
+    private final String name;
+    private final String surname;
 
-    public Human(String name){
+    public Human(String name) {
         this.name = name;
+        this.lastName = null;
+        this.surname = null;
     }
 
-    public Human(String name, String lastName){
+    public Human(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
+        this.surname = null;
     }
 
-    public Human(String name, String surname, String lastName){
+    public Human(String name, String surname, String lastName) {
         this.name = name;
         this.surname = surname;
         this.lastName = lastName;
     }
 
     @Override
-    public String toString(){
-        //удаление null элементов
-        String result = "";
-        if(lastName != null){
-            result += lastName + " ";
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        if (lastName != null) {
+            result.append(lastName).append(" ");
         }
-        if(name != null){
-            result += name + " ";
+        result.append(name);
+        if (surname != null) {
+            result.append(" ").append(surname);
         }
-        if(surname != null){
-            result += surname;
-        }
-        return result.trim();
-        //return lastName + " " + name + " " + surname;
+        return result.toString().trim();
     }
 }
