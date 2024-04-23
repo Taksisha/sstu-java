@@ -1,6 +1,10 @@
 package ru.obydennova.student;
 import java.util.ArrayList;
 
+//public interface Comparable<T> {
+//    int compareTo(T object);
+//}
+
 public class Student implements Comparable<Student> {
     String name;
     int[] grades;

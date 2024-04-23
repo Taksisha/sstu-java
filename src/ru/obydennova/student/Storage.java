@@ -31,9 +31,3 @@ public class Storage<T> {
         System.out.println("Хранилище строк (hello): " + stringStorageHello.getItem());
     }
 }
-
-
-//public interface Comparable<T> {
-//    int compareTo(T object);
-//}
-
