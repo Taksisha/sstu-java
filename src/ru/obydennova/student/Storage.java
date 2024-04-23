@@ -42,7 +42,7 @@ public class Storage<T> {
     }
 }
 
-//public interface Сравнимое<T> {
-//    int сравнить(T объект);
+//public interface Comparable<T> {
+//    int compare(T object);
 //}
 
