@@ -70,17 +70,17 @@ public class Student implements Comparable<Student> {
     }
 
     public static void main(String[] args) {
-        Student student1 = new Student("Alice", 4, 5, 5);
-        Student student2 = new Student("Bob", 3, 4, 4);
+        Student student1 = new Student("Кристина", 4, 5, 5);
+        Student student2 = new Student("Рома", 3, 4, 4);
 
         int comparison = student1.compareTo(student2);
 
         if (comparison > 0) {
-            System.out.println(student1.name + " has a higher average grade.");
+            System.out.println(student1.name + " имеет более высокий средний балл.");
         } else if (comparison < 0) {
-            System.out.println(student2.name + " has a higher average grade.");
+            System.out.println(student2.name + " имеет более высокий средний балл.");
         } else {
-            System.out.println("Both students have the same average grade.");
+            System.out.println("Оба ученика имеют одинаковую среднюю оценку.");
         }
     }
 }
