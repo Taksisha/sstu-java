@@ -34,6 +34,6 @@ public class Storage<T> {
 
 
 //public interface Comparable<T> {
-//    int compare(T object);
+//    int compareTo(T object);
 //}
 
