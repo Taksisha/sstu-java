@@ -2,45 +2,36 @@ package ru.obydennova.student;
 
 public class Storage<T> {
     private final T item;
+    private final T alternativeValue;
 
-    public Storage(T item) {
+    public Storage(T item, T alternativeValue) {
         this.item = item;
+        this.alternativeValue = alternativeValue;
     }
 
     public T getItem() {
-        if (item == null) {
-            // Возвращаем альтернативное значение в зависимости от типа данных
-            if (item instanceof Integer) {
-                return (T) (Integer) -1;
-            } else if (item instanceof String) {
-                return (T) "default";
-            }
-        }
-        return item;
+        return item != null ? item : alternativeValue;
     }
 
     public static void main(String[] args) {
-        // Создаем хранилище для чисел, в котором хранится null
-        Storage<Integer> intStorage1 = new Storage<>(null);
-        // Получаем значение и выводим на экран
-        System.out.println(intStorage1.getItem()); // Выведет: 0
+        // Хранилище чисел, значение null
+        Storage<Integer> intStorageNull = new Storage<>(null, 0);
+        System.out.println("Хранилище чисел (null): " + intStorageNull.getItem());
 
-        // Создаем хранилище для чисел, в котором хранится значение 99
-        Storage<Integer> intStorage2 = new Storage<>(99);
-        // Получаем значение и выводим на экран
-        System.out.println(intStorage2.getItem()); // Выведет: 99
+        // Хранилище чисел, значение 99
+        Storage<Integer> intStorage99 = new Storage<>(99, -1);
+        System.out.println("Хранилище чисел (99): " + intStorage99.getItem());
 
-        // Создаем хранилище для строк, в котором хранится null
-        Storage<String> stringStorage1 = new Storage<>(null);
-        // Получаем значение и выводим на экран
-        System.out.println(stringStorage1.getItem()); // Выведет: default
+        // Хранилище строк, значение null
+        Storage<String> stringStorageNull = new Storage<>(null, "default");
+        System.out.println("Хранилище строк (null): " + stringStorageNull.getItem());
 
-        // Создаем хранилище для строк, в котором хранится значение "hello"
-        Storage<String> stringStorage2 = new Storage<>("hello");
-        // Получаем значение и выводим на экран
-        System.out.println(stringStorage2.getItem()); // Выведет: hello
+        // Хранилище строк, значение "hello"
+        Storage<String> stringStorageHello = new Storage<>("hello", "hello world");
+        System.out.println("Хранилище строк (hello): " + stringStorageHello.getItem());
     }
 }
+
 
 //public interface Comparable<T> {
 //    int compare(T object);
