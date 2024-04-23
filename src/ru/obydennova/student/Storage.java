@@ -42,3 +42,7 @@ public class Storage<T> {
     }
 }
 
+//public interface Сравнимое<T> {
+//    int сравнить(T объект);
+//}
+
