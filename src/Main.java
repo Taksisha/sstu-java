@@ -8,7 +8,7 @@ public class Main {
         try {
             System.out.println(intBox.get());
         } catch (IllegalStateException e) {
-            System.out.println("Box is empty");
+            System.out.println("Коробка пустая");
         }
     }
 }

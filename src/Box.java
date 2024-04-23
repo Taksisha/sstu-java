@@ -3,7 +3,7 @@ public class Box<T> {
 
     public void put(T newItem) {
         if (item != null) {
-            throw new IllegalStateException("Box is already full");
+            throw new IllegalStateException("Коробка полная");
         }
         item = newItem;
     }
