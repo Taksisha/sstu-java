@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/sstu-java.iml" filepath="$PROJECT_DIR$/sstu-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sstu-java.iml" filepath="$PROJECT_DIR$/.idea/sstu-java.iml" />
     </modules>
   </component>
 </project>
