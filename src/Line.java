@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Line {
     private Point startPoint;
     private Point endPoint;
@@ -32,5 +34,19 @@ public class Line {
     public int getLength() {
         int length = (int) Math.sqrt(Math.pow(endPoint.getX() - startPoint.getX(), 2) + Math.pow(endPoint.getY() - startPoint.getY(), 2));
         return length;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Line line = (Line) o;
+        return (Objects.equals(startPoint, line.startPoint) && Objects.equals(endPoint, line.endPoint)) ||
+                (Objects.equals(startPoint, line.endPoint) && Objects.equals(endPoint, line.startPoint));
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(startPoint, endPoint);
     }
 }
