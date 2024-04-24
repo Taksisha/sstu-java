@@ -5,10 +5,11 @@ public class Main {
         Box<Integer> intBox = new Box<>();
         intBox.put(3);
 
-        try {
-            System.out.println(intBox.get());
-        } catch (IllegalStateException e) {
-            System.out.println("Коробка пустая");
-        }
+        System.out.println(intBox.get());
+//        try {
+//            System.out.println(intBox.get());
+//        } catch (IllegalStateException e) {
+//            System.out.println("Коробка пустая");
+//        }
     }
 }
